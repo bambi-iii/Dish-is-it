@@ -104,39 +104,65 @@
                     button.parentElement.remove();
                 }
             </script>
+            
             <div class="flex space-x-4">
-                <div id="ingredients-container" class="h-[600px] w-1/2 overflow-y-auto rounded-lg bg-transparent mt-4">                
-                    <!-- Ingredient 1 -->
-                    <div class="flex items-center mb-2">
-                        <input type="text" placeholder="Ingredient 1" class="w-full px-4 py-2 border rounded-lg bg-white text-gray-700">
-                        <button class="ml-2 text-red-500 hover:text-red-700 font-semibold">&#x2715;</button>
+                <div class="h-[600px] w-1/2">
+                    <div id="ingredients-container" class="h-[600px] overflow-y-auto rounded-lg bg-transparent mt-4">                
+                        <!-- Ingredient 1 -->
+                        <div class="flex items-center mb-2">
+                            <input type="text" placeholder="Ingredient 1" class="w-full px-4 py-2 border rounded-lg bg-white text-gray-700">
+                            <button class="ml-2 text-red-500 hover:text-red-700 font-semibold">&#x2715;</button>
+                        </div>
+                    
+                        <!-- Ingredient 2 -->
+                        <div class="flex items-center mb-2">
+                            <input type="text" placeholder="Ingredient 2" class="w-full px-4 py-2 border rounded-lg bg-white text-gray-700">
+                            <button class="ml-2 text-red-500 hover:text-red-700 font-semibold">&#x2715;</button>
+                        </div>
+                    
+                        <!-- Ingredient 3 -->
+                        <div class="flex items-center mb-2">
+                            <input type="text" placeholder="Ingredient 3" class="w-full px-4 py-2 border rounded-lg bg-white text-gray-700">
+                            <button class="ml-2 text-red-500 hover:text-red-700 font-semibold">&#x2715;</button>
+                        </div>
                     </div>
-                
-                    <!-- Ingredient 2 -->
-                    <div class="flex items-center mb-2">
-                        <input type="text" placeholder="Ingredient 2" class="w-full px-4 py-2 border rounded-lg bg-white text-gray-700">
-                        <button class="ml-2 text-red-500 hover:text-red-700 font-semibold">&#x2715;</button>
-                    </div>
-                
-                    <!-- Ingredient 3 -->
-                    <div class="flex items-center mb-2">
-                        <input type="text" placeholder="Ingredient 3" class="w-full px-4 py-2 border rounded-lg bg-white text-gray-700">
-                        <button class="ml-2 text-red-500 hover:text-red-700 font-semibold">&#x2715;</button>
-                    </div>
+                    <button class="mt-2 w-[540px] h-[36px] bg-[#5b9940] text-white text-[16px] py-2 rounded-lg hover:bg-[#4a8a37] transition duration-200">
+                        Generate Recipes
+                    </button>
+                    <button class="relative bg-[#ffffff] w-[40px] h-[36px] text-white text-[16px] py-2 rounded-lg hover:bg-[#4a8a37] transition duration-200">
+                        <span
+                            class="absolute inset-0 w-[20px] h-[20px] bg-[url('restart.png')] bg-contain bg-no-repeat bg-center m-auto">
+                        </span>
+                    </button>
                 </div>
                 
                 <div id="recipe-outcome-container" class="h-[640px] w-1/2 overflow-y-auto rounded-lg bg-transparent border border-[#222121] border-[2px] mt-6"></div>
             </div>
-            <div class="flex mt-4 justify-center">
-                <button class="w-1/2 bg-[#5b9940] text-white text-lg font-semibold py-2 rounded-lg hover:bg-[#4a8a37] transition duration-200" style="align-self: flex-end;">
-                    Generate Recipes
-                </button>
-            </div>
+        
         </div>
 
         <!-- Right Sidebar -->
-        <div class="w-[555px] bg-[#fbf8e9] shadow-lg p-4 rounded-l-[30px] flex flex-col justify-between" style="height: calc(100vh - 40px); margin-top: 20px;">
-  
+        <div class="w-[555px] bg-[#fbf8e9] shadow-lg p-4 rounded-l-[30px] flex flex-col" style="height: calc(100vh - 40px); margin-top: 20px;">
+            <!-- Header section -->
+            <div class="flex text-[#433f3a] text-[20px] mt-2 mb-2 ml-3">
+                <div class="font-semibold">
+                    Recents | 
+                </div>
+                <div class="ml-2">
+                    Generated Recipes
+                </div>           
+            </div>
+        
+            <!-- Text section below the header -->
+            <div class="ml-3 h-[500px] overflow-y-auto border border">
+                <div class="text-[16px] italic text-gray-500 opacity-70 ml-3 mt-2">
+                    You haven't generated recipes yet.
+                </div>
+            </div>
+
+            <div class="mt-2 ml-3 text-[20px] font-semibold text-[#433f3a]">
+                Recommendations
+            </div>
         </div>
     </div>
 </body>
