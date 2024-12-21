@@ -21,7 +21,7 @@
             transform: translateY(-50%); 
         }
         .favorites-scroll::-webkit-scrollbar {
-            height: 9px;
+            height: 10px;
         }
         .favorites-scroll::-webkit-scrollbar-thumb {
             background-color: #a8a8a8;
@@ -70,9 +70,33 @@
                 <i class="fas fa-search search-icon text-[#433f3a]"></i>
                 <input type="search" id="search" name="search"
                 class= "text-[20px] w-[535px] h-[40px] mt-1 px-4 py-2 bg-transparent border-[2px] border-[#433f3a] rounded-[30px] pl-10 focus:outline-none focus:ring-1 focus:ring-[#433f3a]">
+            <!-- Recipe Category Buttons -->
+                <div class="flex space-x-2 ml-4">
+                    <button class="py-2 px-6 text-sm font-medium text-[#433f3a] border border-[#433f3a] rounded-[30px] bg-gray-100 hover:bg-[#e0e0e0] transition duration-200 focus:outline-none">
+                        Pork
+                    </button>
+                    <button class="py-2 px-6 text-sm font-medium text-[#433f3a] border border-[#433f3a] rounded-[30px] bg-gray-100 hover:bg-[#e0e0e0] transition duration-200 focus:outline-none">
+                        Chicken
+                    </button>
+                    <button class="py-2 px-6 text-sm font-medium text-[#433f3a] border border-[#433f3a] rounded-[30px] bg-gray-100 hover:bg-[#e0e0e0] transition duration-200 focus:outline-none">
+                        Beef
+                    </button>
+                </div>
             </div>
-            <div class="flex mt-[25px] text-[#433f3a] text-[30px] font-semibold mt-6 mb-2 text-center">
+            
+            <div class="flex mt-[25px] text-[#433f3a] text-[30px] font-semibold mt-6 mb-5 text-center">
                 Check out these known Filipino Foods!
+            </div>
+
+            <div class="flex w-max space-x-3">
+                <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
+                  <div class="h-[100px] w-full bg-gray-300 rounded"></div>
+                  <div class="mt-4">
+                    <p class="text-base font-bold text-gray-800">Dish name</p>
+                    <p class="text-xs text-gray-500">Main ingredient</p>
+                  </div>
+                  
+                </div>
             </div>
         </div>
 
