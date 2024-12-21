@@ -17,8 +17,18 @@
         .search-icon { 
             position: absolute;
             left: 150px;
-            top: 16%;
+            top: 12.7%;
             transform: translateY(-50%); 
+        }
+        .favorites-scroll::-webkit-scrollbar {
+            height: 9px;
+        }
+        .favorites-scroll::-webkit-scrollbar-thumb {
+            background-color: #a8a8a8;
+            border-radius: 10px;
+        }
+        .favorites-scroll::-webkit-scrollbar-track {
+            background: transparent;
         }
     </style>
 </head>
@@ -61,16 +71,79 @@
                 <input type="search" id="search" name="search"
                 class= "text-[20px] w-[535px] h-[40px] mt-1 px-4 py-2 bg-transparent border-[2px] border-[#433f3a] rounded-[30px] pl-10 focus:outline-none focus:ring-1 focus:ring-[#433f3a]">
             </div>
-            
             <div class="flex mt-[25px] text-[#433f3a] text-[30px] font-semibold mt-6 mb-2 text-center">
                 Check out these known Filipino Foods!
             </div>
         </div>
 
         <!-- Right Sidebar -->
-        <div class="w-[555px] bg-[#fbf8e9] shadow-lg p-4 rounded-l-[30px] flex flex-col justify-between" style="height: calc(100vh - 40px); margin-top: 20px;">
-  
+        <div class="w-[550px] bg-[#fbf8e9] shadow-lg p-4 rounded-l-[30px] flex flex-col" style="height: calc(100vh - 40px); margin-top: 20px;">
+            <!-- Header section -->
+            <div class="flex text-[#433f3a] text-[20px] mt-2 mb-2 ml-3">
+                <div class="font-semibold">
+                    Recently viewed
+                </div>          
+            </div>
+        
+            <!-- Text section below the header -->
+            <div class="ml-3 h-[500px] overflow-y-auto">
+                <div class="text-[16px] italic text-gray-500 opacity-70 ml-1 mt-2">
+                    Check out some recipes!
+                </div>
+            </div>
+
+            <div class="mt-2 ml-3 text-[20px] font-semibold text-[#433f3a]">
+                Favorites
+            </div>
+
+            <div class="mt-4 ml-3 h-[200px] overflow-x-auto favorites-scroll">
+                <div class="flex w-max space-x-3">
+                  <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a]">
+                    <div class="h-[100px] w-full bg-gray-300 rounded"></div>
+                    <div class="mt-4">
+                      <p class="text-base font-bold text-gray-800">Dish name</p>
+                      <p class="text-xs text-gray-500">Main ingredient</p>
+                    </div>
+                  </div>
+                  <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a]">
+                    <div class="h-[100px] w-full bg-gray-300 rounded"></div>
+                    <div class="mt-4">
+                      <p class="text-base font-bold text-gray-800">Dish name</p>
+                      <p class="text-xs text-gray-500">Main ingredient</p>
+                    </div>
+                  </div>
+                  <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a]">
+                    <div class="h-[100px] w-full bg-gray-300 rounded"></div>
+                    <div class="mt-4">
+                      <p class="text-base font-bold text-gray-800">Dish name</p>
+                      <p class="text-xs text-gray-500">Main ingredient</p>
+                    </div>
+                  </div>
+                  <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a]">
+                    <div class="h-[100px] w-full bg-gray-300 rounded"></div>
+                    <div class="mt-4">
+                      <p class="text-base font-bold text-gray-800">Dish name</p>
+                      <p class="text-xs text-gray-500">Main ingredient</p>
+                    </div>
+                  </div>
+                  <!-- More products... -->
+                </div>
+              </div>
+            
+            <button class="ml-3 mt-5 w-[510px] h-[36px] bg-[#5b9940] text-white text-[16px] py-2 rounded-lg hover:bg-[#4a8a37] transition duration-200">
+                View all
+            </button>
+
         </div>
     </div>
+
+    <script>
+        document.querySelector('.favorites-scroll').addEventListener('wheel', (e) => {
+            if (e.deltaY !== 0) {
+                e.preventDefault();
+                e.currentTarget.scrollLeft += e.deltaY * 0.4;  // Adjust the multiplier for speed
+            }
+        });
+    </script>
 </body>
 </html>
