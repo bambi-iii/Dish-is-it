@@ -1,0 +1,32 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+.nav-icon:hover {
+    cursor: pointer;
+}
+.search-icon { 
+    position: absolute;
+    left: 150px;
+    top: 12.9%;
+    transform: translateY(-50%); 
+}
+.favorites-scroll::-webkit-scrollbar {
+    height: 10px;
+}
+.favorites-scroll::-webkit-scrollbar-thumb {
+    background-color: #a8a8a8;
+    border-radius: 10px;
+}
+.favorites-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+.dishes-scroll::-webkit-scrollbar {
+    width:12px;
+}
+.dishes-scroll::-webkit-scrollbar-thumb {
+    background-color: #a8a8a8;
+    border-radius: 10px;
+}
+.dishes-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}

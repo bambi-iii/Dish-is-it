@@ -7,30 +7,8 @@
     <!-- Include Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .nav-icon:hover {
-            cursor: pointer;
-        }
-        .search-icon { 
-            position: absolute;
-            left: 150px;
-            top: 12.2%;
-            transform: translateY(-50%); 
-        }
-        .favorites-scroll::-webkit-scrollbar {
-            height: 10px;
-        }
-        .favorites-scroll::-webkit-scrollbar-thumb {
-            background-color: #a8a8a8;
-            border-radius: 10px;
-        }
-        .favorites-scroll::-webkit-scrollbar-track {
-            background: transparent;
-        }
-    </style>
+    <link rel="stylesheet" href="recipe-page.css">
+    
 </head>
 <body class="bg-gray-100">
     <div class="flex min-h-screen" style="background-image: url('first bg.png');">
@@ -83,150 +61,110 @@
                     </button>
                 </div>
             </div>
-        
-            <div class="flex mt-[25px] text-[#433f3a] text-[30px] font-semibold mt-6 mb-5 text-center">
-                Check out these known Filipino Foods!
-            </div>
-
-            <div class="flex w-max space-x-6">
-                <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
-                  <div class="h-[100px] w-full bg-gray-300 rounded"></div>
-                  <div class="mt-4">
-                    <p class="text-base font-bold text-gray-800">Dish name</p>
-                    <p class="text-xs text-gray-500">Main ingredient</p>
-                  </div>
-                </div>
-                <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
-                    <div class="h-[100px] w-full bg-gray-300 rounded"></div>
-                    <div class="mt-4">
-                      <p class="text-base font-bold text-gray-800">Dish name</p>
-                      <p class="text-xs text-gray-500">Main ingredient</p>
-                    </div>
-                </div>
-                <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
-                    <div class="h-[100px] w-full bg-gray-300 rounded"></div>
-                    <div class="mt-4">
-                      <p class="text-base font-bold text-gray-800">Dish name</p>
-                      <p class="text-xs text-gray-500">Main ingredient</p>
-                    </div>
-                </div>
-                <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
-                    <div class="h-[100px] w-full bg-gray-300 rounded"></div>
-                    <div class="mt-4">
-                      <p class="text-base font-bold text-gray-800">Dish name</p>
-                      <p class="text-xs text-gray-500">Main ingredient</p>
-                    </div>
-                </div>
-                <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
-                    <div class="h-[100px] w-full bg-gray-300 rounded"></div>
-                    <div class="mt-4">
-                      <p class="text-base font-bold text-gray-800">Dish name</p>
-                      <p class="text-xs text-gray-500">Main ingredient</p>
-                    </div>
-                </div>
-                <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
-                    <div class="h-[100px] w-full bg-gray-300 rounded"></div>
-                    <div class="mt-4">
-                      <p class="text-base font-bold text-gray-800">Dish name</p>
-                      <p class="text-xs text-gray-500">Main ingredient</p>
-                    </div>
-                </div>
-            </div>
             
-            <div class="flex mt-[25px] text-[#433f3a] text-[30px] font-semibold mt-6 mb-5 text-center">
-                Pork Dishes
-            </div>
+            <div class="overflow-y-auto dishes-scroll" style="max-height: 730px;">
+                <div class="flex mt-[25px] text-[#433f3a] text-[30px] font-semibold mt-6 mb-5 text-center">
+                    Check out these known Filipino Foods!
+                </div>
 
-            <div class="flex w-max space-x-6">
-                <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
-                  <div class="h-[100px] w-full bg-gray-300 rounded"></div>
-                  <div class="mt-4">
-                    <p class="text-base font-bold text-gray-800">Dish name</p>
-                    <p class="text-xs text-gray-500">Main ingredient</p>
-                  </div>
-                </div>
-                <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
-                    <div class="h-[100px] w-full bg-gray-300 rounded"></div>
-                    <div class="mt-4">
-                      <p class="text-base font-bold text-gray-800">Dish name</p>
-                      <p class="text-xs text-gray-500">Main ingredient</p>
+                <div class="flex w-max space-x-6 ml-3">
+                    <div class="w-64 h-[250px] p-4 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
+                      <div class="h-[160px] w-full bg-gray-300 rounded"></div>
+                      <div class="mt-3">
+                        <p class="text-lg font-bold text-gray-800">Dish name</p>
+                        <p class="text-s text-gray-500">Main ingredient</p>
+                      </div>
+                    </div>
+                    <div class="w-64 h-[250px] p-4 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
+                      <div class="h-[160px] w-full bg-gray-300 rounded"></div>
+                      <div class="mt-3">
+                        <p class="text-lg font-bold text-gray-800">Dish name</p>
+                        <p class="text-s text-gray-500">Main ingredient</p>
+                      </div>
+                    </div>
+                    <div class="w-64 h-[250px] p-4 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
+                      <div class="h-[160px] w-full bg-gray-300 rounded"></div>
+                      <div class="mt-3">
+                        <p class="text-lg font-bold text-gray-800">Dish name</p>
+                        <p class="text-s text-gray-500">Main ingredient</p>
+                      </div>
+                    </div>
+                    <div class="w-64 h-[250px] p-4 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
+                      <div class="h-[160px] w-full bg-gray-300 rounded"></div>
+                      <div class="mt-3">
+                        <p class="text-lg font-bold text-gray-800">Dish name</p>
+                        <p class="text-s text-gray-500">Main ingredient</p>
+                      </div>
                     </div>
                 </div>
-                <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
-                    <div class="h-[100px] w-full bg-gray-300 rounded"></div>
-                    <div class="mt-4">
-                      <p class="text-base font-bold text-gray-800">Dish name</p>
-                      <p class="text-xs text-gray-500">Main ingredient</p>
-                    </div>
+                
+                <div class="flex mt-[25px] text-[#433f3a] text-[30px] font-semibold mt-6 mb-5 text-center">
+                    Pork Dishes
                 </div>
-                <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
-                    <div class="h-[100px] w-full bg-gray-300 rounded"></div>
-                    <div class="mt-4">
-                      <p class="text-base font-bold text-gray-800">Dish name</p>
-                      <p class="text-xs text-gray-500">Main ingredient</p>
-                    </div>
-                </div>
-                <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
-                    <div class="h-[100px] w-full bg-gray-300 rounded"></div>
-                    <div class="mt-4">
-                      <p class="text-base font-bold text-gray-800">Dish name</p>
-                      <p class="text-xs text-gray-500">Main ingredient</p>
-                    </div>
-                </div>
-                <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
-                    <div class="h-[100px] w-full bg-gray-300 rounded"></div>
-                    <div class="mt-4">
-                      <p class="text-base font-bold text-gray-800">Dish name</p>
-                      <p class="text-xs text-gray-500">Main ingredient</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="flex mt-[25px] text-[#433f3a] text-[30px] font-semibold mt-6 mb-5 text-center">
-                Chicken Dishes
-            </div>
+                <div class="flex w-max space-x-6 ml-3">
+                    <div class="w-64 h-[250px] p-4 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
+                      <div class="h-[160px] w-full bg-gray-300 rounded"></div>
+                      <div class="mt-3">
+                        <p class="text-lg font-bold text-gray-800">Dish name</p>
+                        <p class="text-s text-gray-500">Main ingredient</p>
+                      </div>
+                    </div>
+                    <div class="w-64 h-[250px] p-4 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
+                      <div class="h-[160px] w-full bg-gray-300 rounded"></div>
+                      <div class="mt-3">
+                        <p class="text-lg font-bold text-gray-800">Dish name</p>
+                        <p class="text-s text-gray-500">Main ingredient</p>
+                      </div>
+                    </div>
+                    <div class="w-64 h-[250px] p-4 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
+                      <div class="h-[160px] w-full bg-gray-300 rounded"></div>
+                      <div class="mt-3">
+                        <p class="text-lg font-bold text-gray-800">Dish name</p>
+                        <p class="text-s text-gray-500">Main ingredient</p>
+                      </div>
+                    </div>
+                    <div class="w-64 h-[250px] p-4 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
+                      <div class="h-[160px] w-full bg-gray-300 rounded"></div>
+                      <div class="mt-3">
+                        <p class="text-lg font-bold text-gray-800">Dish name</p>
+                        <p class="text-s text-gray-500">Main ingredient</p>
+                      </div>
+                    </div>
+                </div>
 
-            <div class="flex w-max space-x-6">
-                <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
-                  <div class="h-[100px] w-full bg-gray-300 rounded"></div>
-                  <div class="mt-4">
-                    <p class="text-base font-bold text-gray-800">Dish name</p>
-                    <p class="text-xs text-gray-500">Main ingredient</p>
-                  </div>
+                <div class="flex mt-[25px] text-[#433f3a] text-[30px] font-semibold mt-6 mb-5 text-center">
+                    Chicken Dishes
                 </div>
-                <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
-                    <div class="h-[100px] w-full bg-gray-300 rounded"></div>
-                    <div class="mt-4">
-                      <p class="text-base font-bold text-gray-800">Dish name</p>
-                      <p class="text-xs text-gray-500">Main ingredient</p>
+
+                <div class="flex w-max space-x-6 ml-3">
+                    <div class="w-64 h-[250px] p-4 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
+                      <div class="h-[160px] w-full bg-gray-300 rounded"></div>
+                      <div class="mt-3">
+                        <p class="text-lg font-bold text-gray-800">Dish name</p>
+                        <p class="text-s text-gray-500">Main ingredient</p>
+                      </div>
                     </div>
-                </div>
-                <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
-                    <div class="h-[100px] w-full bg-gray-300 rounded"></div>
-                    <div class="mt-4">
-                      <p class="text-base font-bold text-gray-800">Dish name</p>
-                      <p class="text-xs text-gray-500">Main ingredient</p>
+                    <div class="w-64 h-[250px] p-4 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
+                      <div class="h-[160px] w-full bg-gray-300 rounded"></div>
+                      <div class="mt-3">
+                        <p class="text-lg font-bold text-gray-800">Dish name</p>
+                        <p class="text-s text-gray-500">Main ingredient</p>
+                      </div>
                     </div>
-                </div>
-                <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
-                    <div class="h-[100px] w-full bg-gray-300 rounded"></div>
-                    <div class="mt-4">
-                      <p class="text-base font-bold text-gray-800">Dish name</p>
-                      <p class="text-xs text-gray-500">Main ingredient</p>
+                    <div class="w-64 h-[250px] p-4 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
+                      <div class="h-[160px] w-full bg-gray-300 rounded"></div>
+                      <div class="mt-3">
+                        <p class="text-lg font-bold text-gray-800">Dish name</p>
+                        <p class="text-s text-gray-500">Main ingredient</p>
+                      </div>
                     </div>
-                </div>
-                <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
-                    <div class="h-[100px] w-full bg-gray-300 rounded"></div>
-                    <div class="mt-4">
-                      <p class="text-base font-bold text-gray-800">Dish name</p>
-                      <p class="text-xs text-gray-500">Main ingredient</p>
-                    </div>
-                </div>
-                <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
-                    <div class="h-[100px] w-full bg-gray-300 rounded"></div>
-                    <div class="mt-4">
-                      <p class="text-base font-bold text-gray-800">Dish name</p>
-                      <p class="text-xs text-gray-500">Main ingredient</p>
+                    <div class="w-64 h-[250px] p-4 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a] transform hover:scale-110 hover:shadow-lg transition-all duration-220 ease-in-out">
+                      <div class="h-[160px] w-full bg-gray-300 rounded"></div>
+                      <div class="mt-3">
+                        <p class="text-lg font-bold text-gray-800">Dish name</p>
+                        <p class="text-s text-gray-500">Main ingredient</p>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -252,7 +190,7 @@
                 Favorites
             </div>
 
-            <div class="mt-4 ml-3 h-[200px] overflow-x-auto favorites-scroll">
+            <div class="mt-4 ml-3 h-[208px] overflow-x-auto favorites-scroll">
                 <div class="flex w-max space-x-3">
                   <div class="w-48 h-[180px] p-3 bg-transparent rounded-md shadow-sm border-2 border-[#433f3a]">
                     <div class="h-[100px] w-full bg-gray-300 rounded"></div>
